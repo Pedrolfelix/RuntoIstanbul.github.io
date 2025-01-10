@@ -10,18 +10,35 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
-            color: #333;
+            background-color: #f8f4f0;
+            color: #3e2723;
         }
         header {
-            background: #ff5722;
+            background: #8d6e63;
             color: #fff;
             padding: 1.5rem 0;
             text-align: center;
             font-size: 1.8rem;
         }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #a1887f;
+            padding: 1rem 0;
+            margin-top: -0.5rem;
+        }
+        .menu a {
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1rem;
+        }
+        .menu a:hover {
+            color: #ffccbc;
+        }
         nav {
-            background: #ffa726;
+            background: #6d4c41;
             color: #fff;
             display: flex;
             justify-content: center;
@@ -43,55 +60,47 @@
             max-width: 900px;
         }
         section h2 {
-            color: #ff5722;
-            margin-bottom: 1rem;
+            color: #6d4c41;
         }
         footer {
             text-align: center;
             padding: 1rem 0;
-            background: #ff5722;
+            background: #8d6e63;
             color: #fff;
             margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-        a {
-            color: #ff5722;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        Welcome to Your Turkey Travel Guide
+        Travel Guide to Turkey
+        <div class="menu">
+            <a href="#food-tourism">Food Tourism</a>
+            <a href="#places-to-go">Places to Go</a>
+            <a href="#cheap-flights">Cheap Flights</a>
+            <a href="#accommodation">Accommodation</a>
+        </div>
     </header>
     <nav>
-        <a href="#food">Food Tourism</a>
-        <a href="#places">Places to Visit</a>
-        <a href="#flights">Cheap Flights</a>
-        <a href="#stay">Affordable Stays</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
     </nav>
-    <section id="food">
-        <h2>Food Tourism</h2>
-        <p>Explore the rich and delicious cuisine of Turkey, from kebabs to baklava and everything in between!</p>
-    </section>
-    <section id="places">
-        <h2>Places to Visit</h2>
-        <p>Discover the historical landmarks, beautiful beaches, and vibrant cities Turkey has to offer.</p>
-    </section>
-    <section id="flights">
-        <h2>Cheap Flights</h2>
-        <p>Find the best deals on flights to Turkey and make the most of your budget.</p>
-    </section>
-    <section id="stay">
-        <h2>Affordable Stays</h2>
-        <p>Stay comfortably without breaking the bank. Here are some recommendations for budget-friendly accommodations.</p>
+    <section>
+        <h2 id="food-tourism">Food Tourism</h2>
+        <p>Discover the rich culinary heritage of Turkey, from traditional kebabs to sweet delights like baklava.</p>
+        
+        <h2 id="places-to-go">Places to Go</h2>
+        <p>Explore the wonders of Turkey, including Istanbul, Cappadocia, and the beaches of Antalya.</p>
+
+        <h2 id="cheap-flights">Cheap Flights</h2>
+        <p>Learn how to find the most affordable flights to Turkey and plan your budget travel.</p>
+
+        <h2 id="accommodation">Accommodation</h2>
+        <p>Find the best budget-friendly places to stay, from cozy hostels to charming boutique hotels.</p>
     </section>
     <footer>
-        &copy; 2025 Turkey Travel Guide. All rights reserved.
+        &copy; 2025 Travel Guide to Turkey. All Rights Reserved.
     </footer>
 </body>
 </html>
