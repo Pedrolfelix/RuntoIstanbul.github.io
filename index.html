@@ -3,124 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUN to Turkey</title>
+    <meta name="description" content="Discover Istanbul with our comprehensive travel guide for food, culture, bargains, and more.">
+    <meta name="keywords" content="Istanbul, travel guide, food, cheap flights, recommendations">
+    <title>Run to Istanbul</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #fcf7f3;
-            color: #4e342e;
+            background-color: #f1f1f1;
+            color: #333;
         }
         header {
-            background: #795548;
+            background: #2C3E50;
             color: #fff;
-            padding: 1.5rem 0;
+            padding: 2rem;
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .menu {
             display: flex;
             justify-content: center;
-            background-color: #5d4037;
-            padding: 1rem 0;
-            margin-top: -0.5rem;
+            background-color: #34495E;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .menu a {
-            margin: 0 1rem;
+            margin: 0 1.5rem;
             text-decoration: none;
-            font-weight: bold;
-            color: #fbe9e7;
-            font-size: 1rem;
+            color: #ecf0f1;
+            font-size: 1.2rem;
+            transition: color 0.3s;
         }
         .menu a:hover {
-            color: #d7ccc8;
+            color: #e74c3c;
         }
-        nav {
-            background: #6d4c41;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            padding: 1rem 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
+        main {
+            padding: 3rem 1.5rem;
+            margin: 2rem auto;
+            max-width: 1100px;
         }
         section {
-            padding: 2rem;
-            margin: auto;
-            max-width: 900px;
+            padding: 3rem 1.5rem;
+            margin: 2rem 0;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
         }
         section h2 {
-            color: #4e342e;
+            font-size: 2rem;
+            color: #2C3E50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #7f8c8d;
         }
         footer {
             text-align: center;
-            padding: 1rem 0;
-            background: #795548;
+            padding: 1.5rem;
+            background: #2C3E50;
             color: #fff;
+            font-size: 1.1rem;
             margin-top: 2rem;
+        }
+        footer a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Beer Image Style */
+        #beerImage {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 20px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        /* Modal Style */
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            z-index: 999;
+            overflow-y: auto;
+        }
+        #modalContent {
+            background: #34495E;
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        #modalContent h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        #modalContent p {
+            font-size: 1.1rem;
+        }
+        #closeModalBtn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        #closeModalBtn:hover {
+            background: #c0392b;
         }
     </style>
 </head>
 <body>
     <header>
-        RUN to Turkey
+        Run to Istanbul
     </header>
-    <div class="menu">
-        <a href="#places">Before Arriving</a>
-        <a href="#food">Food & Cuisine</a>
-        <a href="#bargains"> Bargaining prices</a>
-        <a href="#staynflight">Cheap Flights and Stay</a>
-        <a href="#food">Food near atractions</a>
-        <a href="#guide"> Short trip Quick-Guides</a>
-        <a href="#rec"> Our recommendations</a>
-    </div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="menu">
+            <a href="#food" aria-label="Go to Food & Cuisine section">Food & Cuisine</a>
+            <a href="#bargains" aria-label="Go to Bargaining Prices section">Bargaining Prices</a>
+            <a href="#staynflight" aria-label="Go to Cheap Flights & Stay section">Cheap Flights & Stay</a>
+            <a href="#food-attractions" aria-label="Go to Food Near Attractions section">Food Near Attractions</a>
+            <a href="#guide" aria-label="Go to Quick Trip Guides section">Quick Trip Guides</a>
+            <a href="#rec" aria-label="Go to Our Recommendations section">Our Recommendations</a>
+        </div>
     </nav>
-    <section id="places">
-        <h2>Places to Visit</h2>
-        <p>Explore Turkey's historical and cultural landmarks...</p>
-    </section>
-    <section id="food">
-        <h2>Food & Cuisine</h2>
-        <p>Discover Turkey's rich and diverse culinary traditions...</p>
-    </section>
-    <section id="bargains">
-        <h2>How to Bargain in Turkey</h2>
-        <p>Find tips for booking affordable flights to Turkey...</p>
-    </section>
-    <section id="staynflight">
-        <h2>Where to find Cheap Flights and Stay</h2>
-        <p>Learn about budget-friendly accommodations...</p>
-    </section>
-    <section id="food">
-        <h2>Food near attractions</h2>
-        <p>Get practical advice for making the most of your trip...</p>
-    </section>
-    <section id="guide">
-        <h2>Short trip Quick-Guides</h2>
-        <p>Get practical advice for making the most of your trip...</p>
-    </section>
-    <section id="rec">
-        <h2>Our Personal Recommendation</h2>
-        <p>Get practical advice for making the most of your trip...</p>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lwEcs1Myfm4hIZTGHYdeme53tAztwa4&ehbc=2E312F" width="640" height="480"></iframe>
-    </section>
+
+    <main>
+        <section id="food">
+            <h2>Food & Cuisine</h2>
+            <img src="istanbul-food.jpg" alt="Traditional Turkish dishes" width="100%" height="auto">
+            <p>Discover Turkey's rich and diverse culinary traditions, from kebabs to baklava, Turkish delight, and street food.</p>
+        </section>
+
+        <section id="bargains">
+            <h2>How to Bargain in Turkey</h2>
+            <img src="bargain-shopping.jpg" alt="Bargaining in Istanbul's Grand Bazaar" width="100%" height="auto">
+            <p>Find tips for booking affordable flights to Turkey and strategies for haggling prices in markets like the Grand Bazaar.</p>
+        </section>
+
+        <section id="staynflight">
+            <h2>Where to Find Cheap Flights & Stay</h2>
+            <img src="cheap-flights.jpg" alt="Budget travel options for flights and accommodation" width="100%" height="auto">
+            <p>Learn about budget-friendly accommodations and how to find cheap flights to Istanbul, ensuring you get the best deal.</p>
+        </section>
+
+        <section id="food-attractions">
+            <h2>Food Near Attractions</h2>
+            <img src="food-attractions.jpg" alt="Street food near Istanbul's attractions" width="100%" height="auto">
+            <p>Get practical advice for making the most of your trip by exploring the best food spots near popular attractions in Istanbul.</p>
+        </section>
+
+        <section id="guide">
+            <h2>Quick Trip Guides</h2>
+            <img src="trip-guide.jpg" alt="Quick travel guide to Istanbul" width="100%" height="auto">
+            <p>If you're an NYUAD student or a first-time visitor, here's a quick guide to help you navigate your short trip to Istanbul.</p>
+        </section>
+
+        <section id="rec">
+            <h2>Our Recommendations</h2>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lwEcs1Myfm4hIZTGHYdeme53tAztwa4&ehbc=2E312F" width="900" height="480"></iframe>
+            <p>Based on local insights and traveler feedback, check out our top recommendations for what to do, where to eat, and where to stay in Istanbul.</p>
+        </section>
+    </main>
+
     <footer>
-        &copy; 2025 Travel Guide to Turkey. All Rights Reserved.
+        <p>&copy; 2025 Run to Istanbul. All rights reserved.</p>
+        <p><a href="privacy-policy.html" aria-label="Go to privacy policy page">Privacy Policy</a></p>
     </footer>
+     <!-- Beer Image that triggers the modal -->
+     <img src="https://pixsector.com/cache/b2245e09/av2401e6bf0cd30be853e.png" alt="Beer" id="beerImage" aria-label="Click to discover drinking places in Istanbul">
+
+     <!-- Hidden Modal with places to drink and clubs -->
+     <div id="modal">
+         <div id="modalContent">
+             <h3>Places to Drink & Clubs in Istanbul</h3>
+             <p>Istanbul is known for its vibrant nightlife and unique bars. Check out these famous drinking spots...</p>
+             <ul>
+                 <li>1. Beyoğlu District - Best known for its bars and clubs</li>
+                 <li>2. Kadıköy - Trendy bars with a local vibe</li>
+                 <li>3. Ortaköy - Stunning waterfront bars and nightclubs</li>
+                 <li>4. Galata - Bohemian cafes and rooftop bars</li>
+             </ul>
+             <button id="closeModalBtn">Close</button>
+         </div>
+     </div>
+ 
+     <script>
+         // Show modal when beer image is clicked
+         document.getElementById("beerImage").addEventListener("click", function() {
+             document.getElementById("modal").style.display = "block";
+         });
+ 
+         // Close modal when 'Close' button is clicked
+         document.getElementById("closeModalBtn").addEventListener("click", function() {
+             document.getElementById("modal").style.display = "none";
+         });
+ 
+         // Close modal when clicked outside the modal content
+         window.addEventListener("click", function(event) {
+             if (event.target == document.getElementById("modal")) {
+                 document.getElementById("modal").style.display = "none";
+             }
+         });
+     </script>
+ 
 </body>
 </html>
 
