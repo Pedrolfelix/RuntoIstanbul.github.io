@@ -8,34 +8,57 @@
     <title>Run to Istanbul</title>
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/9906/9906530.png">
     <style>
-        body {
+          body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f1f1f1;
             color: #333;
         }
+
         header {
             background: #2C3E50;
             color: #fff;
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
             font-size: 2.5rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        /* Navigation Menu */
         .menu {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             background-color: #34495E;
-            padding: 1.5rem;
+            padding: 1rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .menu a {
-            margin: 0 1.5rem;
+            color: #fff;
             text-decoration: none;
-            color: #ecf0f1;
-            font-size: 1.2rem;
-            transition: color 0.3s;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #2C3E50;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu a {
+                display: block;
+                width: 100%; /* Full-width buttons on smaller screens */
+                text-align: center;
+            }
         }
         .menu a:hover {
             color: #e74c3c;
@@ -136,6 +159,7 @@
         #closeModalBtn:hover {
             background: #c0392b;
         }
+      
     </style>
 </head>
 <body>
@@ -144,14 +168,14 @@
     </header>
 
     <nav role="navigation" aria-label="Main navigation">
-        <div class="menu">
-            <a href="#why" aria-label="Go to Why Istanbul section">Why Istanbul?</a>
-            <a href="#break" aria-label="Go to Going on Spring or Fall section">Going on Spring or Fall</a>
-            <a href="#money" aria-label="Go to Dealing with Money section">Dealing with Money</a>
-            <a href="#staynflight" aria-label="Go to Cheap Flights & Stay section">Cheap Flights & Stay</a>
-            <a href="#guide" aria-label="Go to Quick Trip Guides section">Quick Trip Guides</a>
-            <a href="#rec" aria-label="Go to Our Recommendations section">Our Recommendations</a>
-        </div>
+        <nav class="menu">
+            <a href="#why">Why Istanbul?</a>
+            <a href="#break">Spring or Fall</a>
+            <a href="#money">Dealing with Money</a>
+            <a href="#staynflight">Cheap Flights and Stay</a>
+            <a href="#guide">Trip Guides</a>
+            <a href="#rec">Recommendations</a>
+        </nav>
     </nav>
 
     <div id="istanbul-photo">
@@ -166,7 +190,7 @@
     <main>
         <section id="why">
             <h2>Why Istanbul</h2>
-            <img src="https://i.pinimg.com/736x/92/89/d9/9289d977c2672896ce603a190997d13a.jpg" alt="Traditional Turkish sweets - baklava" width="49%" height="400px" style=" object-fit: cover; object-position: 100%">  <img src="https://media.gettyimages.com/id/578146268/photo/eggs-with-tomatoes-green-peppers-and-green-onion-cooked-in-a-cast-iron-pan.jpg?s=612x612&w=0&k=20&c=eg0Cd1y-RMfajJYJoqZ4hv-SXSKoBGY-GelJiYhHZCM=" alt="Traditional Turkish food" width="50%" height="400px" style=" object-fit: cover; object-position:0%">
+            <img src="https://i.pinimg.com/736x/92/89/d9/9289d977c2672896ce603a190997d13a.jpg" alt="Traditional Turkish sweets - baklava" width="49%" height="400px" style=" object-fit: cover; object-position: 100%"><img src="https://media.gettyimages.com/id/578146268/photo/eggs-with-tomatoes-green-peppers-and-green-onion-cooked-in-a-cast-iron-pan.jpg?s=612x612&w=0&k=20&c=eg0Cd1y-RMfajJYJoqZ4hv-SXSKoBGY-GelJiYhHZCM=" alt="Traditional Turkish food" width="50%" height="400px" style=" object-fit: cover; object-position:0%">
             <p>If you are here, you want to know more about Istanbul and why should be the place to go in your semester, holiday or weekend break. Here a few reasons why Istanbul is the place to run to: </p> 
 
             <h3>Cultural and History</h3>
@@ -174,6 +198,10 @@
             <p>Istanbul is the only city in the world that it is across two continents: Europe and Asia The Bosphorus Strait divides the city, offering stunning views and the chance to experience two cultures in one city. </p>
             <p>Besides that, Istanbul has been the capital of three major empires: the Roman, Byzantine, and Ottoman Empires. Important landmarks like the Hagia Sophia, Topkapi Palace, and the Blue Mosque are steeped in history.</p>
             
+            <h3>Landscape and Nature</h3>
+            <p>Istanbul has one of the main breathtaking landscape that you could ever see, not even the images on this guide can describe how it is, specially on the sunset. Complementing, the beautiful landscape Istanbul is surrounded by beautiful nature, with the Bosporus Strait, the Black Sea, and the Marmara Sea providing a stunning connection between the two sides of the city's skyline</p>
+            
+
             <h3>Must-Try Dishes</h3>
             <p>Istanbul has an amazing cuisine, from delicious meat food like kebabs to amazing sweets like bakhlava, Istanbul is the best place to have food on the Spring or Fall. In Istanbul you will find: </p>
             <ul>
@@ -186,12 +214,12 @@
         <h3>Coffee and Tea Culture</h3>
         <p>If you enjoy a good coffee or hot drinks, Istanbul needs to be in your list of places to visit. You probably gonna be craving for a good coffee on the Spring with the lower temperature, you gonna find:</p>
         <ul>
-            <li><strong>Turkish Coffee:</strong> Visit historic cafes like <span class="highlight">Mandabatmaz</span> for a strong, aromatic brew served with a side of Turkish delight.</li>
-            <li><strong>Çay (Turkish Tea):</strong> Sip tea in tulip-shaped glasses at tea gardens such as <span class="highlight">Çamlıca Hill</span> or by the Bosphorus while enjoying an amazing view.</li>
-        </ul>
+            <li><strong>Turkish Coffee:</strong> Visit historic cafes like <a href="https://www.instagram.com/mandabatmazkahvesi/?hl=en"> Mandabatmaz</a> for a strong, aromatic brew served with a side of Turkish delight.</li>
+            <li><strong>Çay (Turkish Tea):</strong> Sip tea in tulip-shaped glasses at tea gardens such as <a href="https://www.tripadvisor.com.tr/Attraction_Review-g293974-d1899792-Reviews-Camlica_Hill-Istanbul.html"> Çamlıca Hill</a> or by the Bosphorus while enjoying an amazing view.</li>
+        </ul>  
         <p><em>Insider Tip:</em> Learn how to interpret your coffee grounds for a fun fortune-telling experience!</p>
         <p> In Turkey, coffee fortune-telling, or tasseography, is a traditional and fun cultural practice. After finishing a cup of Turkish coffee, the leftover grounds at the bottom of the cup are interpreted to reveal insights about your past, present, or future. This can include symbols, shapes, or patterns formed by the grounds when the cup is inverted onto a saucer.</p>
-
+        
     
         <h3>Street Food Adventures</h3>
         <p>We told you about the turkish cuisines, but one of the main types of food that they are really good is street food, </p>
@@ -205,7 +233,7 @@
 
         <section id="break">
             <h2>Going on Spring or Fall break</h2>
-            <img src="https://i.pinimg.com/736x/8c/35/3c/8c353c943abaedf961a8ea351092b0f4.jpg" alt="Traditional Turkish sweets - baklava" width="49%" height="400px" style=" object-fit: cover; object-position: 100%">  <img src="https://i.pinimg.com/736x/a5/98/93/a59893f261e6e062d0a3cf39890372d5.jpg" alt="Traditional Turkish food" width="50%" height="400px" style=" object-fit: cover; object-position:0%">
+            <img src="https://i.pinimg.com/736x/8c/35/3c/8c353c943abaedf961a8ea351092b0f4.jpg" alt="Traditional Turkish sweets - baklava" width="49%" height="400px" style=" object-fit: cover; object-position: 100%"><img src="https://i.pinimg.com/736x/a5/98/93/a59893f261e6e062d0a3cf39890372d5.jpg" alt="Traditional Turkish food" width="50%" height="400px" style=" object-fit: cover; object-position:0%">
             <p>If you an NYUAD or any University student you understand the value of a semester break, is the moment to relax. And I also want that for you, we want to make sure that you will be well informed about Istanbul on the Spring and on the Fall. </p>
             <h3>Spring Break in Istanbul (March)</h3>
         <h4>Weather Characteristics</h4>
@@ -255,7 +283,7 @@
 
         <section id="money">
             <h2>How to Deal with Money and Bargain</h2>
-            <img src="https://i.pinimg.com/736x/ae/1b/54/ae1b5494ae8cbf327f22c3fdf4491965.jpg" alt="Gran Market Istanbul" width="49%" height="400px" style=" object-fit: cover; object-position: 100%">  <img src="https://i.pinimg.com/736x/48/22/98/48229822e6fe0dd98d229559c42a9ced.jpg" alt="Traditional Turkish food" width="50%" height="400px" style=" object-fit: cover; object-position:20% 100%">
+            <img src="https://i.pinimg.com/736x/ae/1b/54/ae1b5494ae8cbf327f22c3fdf4491965.jpg" alt="Gran Market Istanbul" width="49%" height="400px" style=" object-fit: cover; object-position: 100%"><img src="https://i.pinimg.com/736x/48/22/98/48229822e6fe0dd98d229559c42a9ced.jpg" alt="Traditional Turkish food" width="50%" height="400px" style=" object-fit: cover; object-position:20% 100%">
             <p> As in any other country, exchanging money is a sensitive topic, with abusive fares withdrawing money can become a headache, but we are here for you.  </p>
             <p>If you have or can create a multicurency account, such as <a href="https://wise.com/"> Wise</a> or <a href="https://www.revolut.com/"> Revolut</a>, we totally recommend. These accounts can be the savior of your trip when paying less taxes, since they allow you to exchange the money on the account and withdrawal from an ATM on the local currency, not paying the ATM additional taxes. </p>
             <p> If you need a currency converter you can go for <a href="https://wise.com/"> Wise</a>, normally they have a reasonable fare.</p>
@@ -277,8 +305,11 @@
                     <li><h3>Key Phrases in Turkish for Bargaining</h3>
                         <ul>
                             <li><strong>Çok pahalı!</strong> (It's too expensive!)</li>
+                            <iframe src="https://drive.google.com/file/d/1eBvj-VxrGWUWNl8R0a51BctQIcB95_Rq/preview" width="300" height="50" allow="autoplay"></iframe>
                             <li><strong>Son fiyat ne?</strong> (What is your final price?)</li>
+                            <iframe src="https://drive.google.com/file/d/1hVjL6SOrGo1VMonLP60ZfZFM0IIiiE_i/preview" width="300" height="50" allow="autoplay"></iframe>
                             <li><strong>İndirim yapar mısınız?</strong> (Can you give me a discount?)</li>
+                            <iframe src="https://drive.google.com/file/d/1Dwrz3wHDQL9ewpR4fq32HIULrV1E2wb4/preview" width="300" height="50" allow="autoplay"></iframe>
                         </ul></li>
 
                     <li>  <h3>Best Places to Bargain in Turkey</h3>
@@ -304,24 +335,69 @@
 
         <section id="staynflight">
             <h2>Where to Find Cheap Flights & Stay</h2>
-            <img src="https://images.unsplash.com/photo-1732972863069-8fa69fdc6ad5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Budget travel options for flights and accommodation" width="100%" height="300px" style="object-fit: cover;">
+            
+            <img src="https://images.unsplash.com/photo-1732972863069-8fa69fdc6ad5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Budget travel options for flights and accommodation" width="100%" height="20%" style="object-fit: cover;">
             <p>Learn about budget-friendly accommodations and how to find cheap flights to Istanbul, ensuring you get the best deal.</p>
             <p>If you flying from Abu Dhabi I have maybe a bad news for you, the favorite of the budget-friendly traveler - <a href="https://wizzair.com/en-gb"> Wiz</a> - doesn't have flights to Istanbul. However, that are other flight companies with cheap prices that allow you go to Istanbul from Abu Dhabi, such as <a href="https://www.flypgs.com/en"> Pegasus</a> or/and <a href="https://www.flypgs.com/en"> Air arabia</a></p>
+            <p>Falcons - NYUAD money - can be used to buy flights, book airbnb or hoteis - using booking - trought nirvana travel on campus!!</p>
+
+            <h3>The NYUAD Flight</h3>
+            <p> The perfect flight to take from Abu Dhabi or any other place to arrive in Istanbul is any flight that you can lend you on the airport at early morning 5-6 a.m, giving time to take a taxi from the airport to the city wihout having much traffic. This plan, would allow you to be the most time efficient possible and start enjoying your day on the best way possible.  </p>
+
+            <body>
+                <p>Click the link below to see flight prices to Istanbul:</p>
+                <a id="flightLink" href="#" target="_blank">Check Flights</a>
+              
+                <script>
+                  // Replace with your chosen destination airport/city code
+                  const destinationCode = "Istanbul";
+              
+                  // Use a geolocation API to fetch user's location
+                  async function getUserLocation() {
+                    try {
+                      const response = await fetch("https://ipapi.co/json/");
+                      const data = await response.json();
+                      return data.city; // You can use `data.region_code` or `data.country_code` for more precision
+                    } catch (error) {
+                      console.error("Error fetching location:", error);
+                      return null;
+                    }
+                  }
+              
+                  async function updateFlightLink() {
+                    const userCity = await getUserLocation();
+                    if (userCity) {
+                      const flightUrl = `https://www.google.com/travel/flights?q=from:${encodeURIComponent(userCity)}+to:${destinationCode}`;
+                      document.getElementById("flightLink").href = flightUrl;
+                    } else {
+                      document.getElementById("flightLink").textContent = "Unable to fetch location";
+                    }
+                  }
+              
+                  // Update the link once the page loads
+                  updateFlightLink();
+                </script>
+              </body>
+
 
             <h3>Searching for cheap places to stay in Istanbul?</h3> 
 
             <p> Places in Istanbul can be cheap. However, there is a high probability of the prices going up depending of the neighborhood you chose to be, the best thing you could do is go with friends, get an <a href="https://www.airbnb.ae/istanbul-turkiye/stays"> Airbnb </a> and split with them. Istanbul is an intense city with local food and shopping close to buildings full of airbnbs or locals that lived there for years, with that we fully recommend getting an airbnb to have better cultural experience of the city - knowing the city as a local. However, if you still fill an airbnb can be too much, Istanbul has an amazing set of <a href="https://www.booking.com/hostels/city/ae/abu-dhabi.html"> Hostels</a> that you could choose to spent your holiday/break </p>
 
+            <h3>Leaving Istanbul Airport</h3>
+            <p> A "bad" thing about the airports in Istanbul is that they stay a little far from the city, so the transport options if you trying to save money is bus and train. However, to be more comfortable, I recommend getting a taxi and splitting with your friends, if you going alone, get the train/bus. It will take 2 hours if you get traffic - very likely. Besides that little moment, transport on the city is very efficient</p>
+
             <h3>Transport in Istanbul</h3>
             <p>Istanbul is almost an walkable city, if you have a problem in your ankle you gonna have a hard time to go over the streets that were built on high hills, but if you don't have any condition is gonna be good for you calfs so go for it! In terms of going 
                 to places on the other side of the river, you can take the Istanbul train or an ship to the other side - specially if you going between the Anatolian (Asian) side and the European Side.</p>
             <p> To get trains or ships, Istanbul uses the same transport system, and you gonna need a pass or the transport card to use it, if you plan to go around a lot in instabul we recommend to get the istanbul transport Card, you can recharge it in any station and it costs around 130 Turkish lyra - a very good investment.</p>
-            <img src="https://istanbul.tips/wp-content/uploads/2023/04/istanbul-kart-istanbul-1-1024x600.jpeg" alt ="Istanbul card" width="50%" height="50%" >
+            <img src="https://istanbul.tips/wp-content/uploads/2023/04/istanbul-kart-istanbul-1-1024x600.jpeg" alt ="Istanbul card" width="60%" height="60%" >
         </section> 
 
         <section id="guide">
             <h2>Quick Trip Guides</h2>
-            <img src="https://i.pinimg.com/736x/df/9c/6e/df9c6e3556b6a4816f97c0d96ba0ad2c.jpg" alt="Galata Tower" width="49%" height="400px" style=" object-fit: cover; object-position: 50% 70%">  <img src="https://i.pinimg.com/736x/06/43/b5/0643b52652a281382530bb7221d48849.jpg" alt="Ortaköy Mosque" width="50%" height="400px" style=" object-fit: cover; object-position:0% 20%">
+            <img src="https://i.pinimg.com/736x/df/9c/6e/df9c6e3556b6a4816f97c0d96ba0ad2c.jpg" alt="Galata Tower" width="49%" height="400px" style=" object-fit: cover; object-position: 50% 70%"><img src="https://i.pinimg.com/736x/06/43/b5/0643b52652a281382530bb7221d48849.jpg" alt="Ortaköy Mosque" width="50%" height="400px" style=" object-fit: cover; object-position:0% 20%">
+
             <p>If you're in a rush like any NYUAD student or a first-time visitor and don't have time to read the guide, here's a few guides to help you navigate your short trip to Istanbul. We considered a 3-day trip with different types of tourism:</p>
             <ul>
                 <li><a href="https://drive.google.com/file/d/1w3u3XzFSd8XiDMAAzElv56aCtSOpSB6N/preview" download> 3-Day Trip for Cultural, Historical, and Religious Tourism</a></li>
@@ -334,7 +410,7 @@
 
         <section id="rec">
             <h2>Our Recommendations</h2>
-            <p>Based on local insights and traveler feedback, check out our top recommendations for what to do, where to eat, and where to stay in Istanbul.</p>
+            <p>Based on local insights and traveler feedback, check out our top recommendations for places to visit and eat in Istanbul.</p>
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lwEcs1Myfm4hIZTGHYdeme53tAztwa4&ehbc=2E312F" width="100%" height="480"></iframe>
         </section>
     </main>
@@ -342,6 +418,11 @@
     <footer>
         <p>&copy; 2025 Run to Istanbul, Pedro Felix. All rights reserved.</p>
         <p><a href="privacy-policy.html" aria-label="Go to privacy policy page">Privacy Policy</a></p>
+        <p>NYUAD traveller and this guide:</p>
+        <div style="margin-top: 10px; text-align: center;">
+            <img src="https://i.ytimg.com/vi/dsGREEXn9G4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1SC5qO8MlFhQpQVu99rJbQtrn8A" alt="A funny illustration of travelers with NYUAD vibes" style="max-width: 400px; border-radius: 10px;">
+            <p><em>“May the force of NYUAD travelers be with you!”</em></p>
+        </div>
     </footer>
      <!-- Beer Image that triggers the modal -->
      <img src="https://pixsector.com/cache/b2245e09/av2401e6bf0cd30be853e.png" alt="Beer" id="beerImage" aria-label="Click to discover drinking places in Istanbul">
@@ -350,7 +431,7 @@
      <div id="modal">
          <div id="modalContent">
              <h5>Easter Egg! </h5>
-                <h3>Places to Drink & Clubs in Istanbul</h3>
+                <h3>Places to Drink & Club in Istanbul</h3>
              <p> If you 18+, we have good news for you! Turkey's legal drinking age is 18 and Istanbul is known for its vibrant nightlife and unique bars. 
                 So we made an special selection about clubs and bars that we recommend!
              </p>
@@ -408,4 +489,3 @@
  
 </body>
 </html>
-
